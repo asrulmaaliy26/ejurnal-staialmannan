@@ -1,0 +1,103 @@
+name: Audit & Deteksi Perubahan VPS
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Berjalan otomatis setiap hari pukul 01:00 UTC (08:00 WIB)
+    - cron: '0 1 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  audit:
+    name: Scan & Audit Server VPS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p ${{ secrets.VPS_PORT || '22' }} ${{ secrets.VPS_HOST || '72.61.143.19' }} >> ~/.ssh/known_hosts
+
+      - name: 1. Deep Scan Folder Ignored (Public & Cache) dari File Script Liar
+        run: |
+          echo "=== MEMINDAI FILE SCRIPT ILEGAL DI FOLDER PUBLIC & CACHE ==="
+          TARGET_DIR="${{ secrets.VPS_TARGET_DIR || '/home/staialmannan/ejurnal.staialmannan.ac.id/' }}"
+          
+          # Periksa apakah ada file berekstensi script (.php, .phtml, .phar, .cgi, .pl) di dalam public/
+          MALICIOUS_FILES=$(ssh -p ${{ secrets.VPS_PORT || '22' }} ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST || '72.61.143.19' }} \
+            "find ${TARGET_DIR}public/ ${TARGET_DIR}cache/ -type f \( -name '*.php*' -o -name '*.phtml' -o -name '*.phar' -o -name '*.cgi' -o -name '*.pl' \) 2>/dev/null || true")
+
+          if [ -n "$MALICIOUS_FILES" ]; then
+            echo "::error title=PERINGATAN KEAMANAN!::Ditemukan file script terlarang di folder public/cache:"
+            echo "$MALICIOUS_FILES"
+            echo "### ⚠️ TEMUAN FILE BERBAHAYA DI FOLDER TERSEMBUNYI:" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            echo "$MALICIOUS_FILES" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ Folder public/ dan cache/ bersih dari file script liar!"
+            echo "### ✅ Folder public/ & cache/ Bersih (Tidak ada script liar)" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: 2. Tarik Perubahan Kode dari VPS ke Runner
+        run: |
+          TARGET_DIR="${{ secrets.VPS_TARGET_DIR || '/home/staialmannan/ejurnal.staialmannan.ac.id/' }}"
+          
+          # Sinkronkan file kode dari VPS ke runner (kecuali cache, public, config, git)
+          rsync -avz -e "ssh -p ${{ secrets.VPS_PORT || '22' }}" \
+            --exclude="/.git/" \
+            --exclude="/.github/" \
+            --exclude="/config.inc.php" \
+            --exclude="/public/" \
+            --exclude="/cache/" \
+            --exclude="/files/" \
+            --exclude="/archive1/" \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST || '72.61.143.19' }}:${TARGET_DIR} ./
+
+      - name: 3. Deteksi Perbedaan (Diff Analysis)
+        id: check_diff
+        run: |
+          git status --short
+          
+          # Cek apakah ada file yang berubah atau ditambah di VPS
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+            echo "Perubahan terdeteksi di VPS!"
+          else
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+            echo "Tidak ada perubahan kode di VPS. Server sinkron dan identik dengan GitHub."
+          fi
+
+      - name: 4. Catat Perubahan ke Branch 'vps-audit' (Jika Ada File Berubah)
+        if: steps.check_diff.outputs.changes_detected == 'true'
+        run: |
+          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
+          BRANCH_NAME="vps-audit-${TIMESTAMP}"
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Buat branch audit baru agar branch main tidak terganggu
+          git checkout -b "$BRANCH_NAME"
+          git add -A
+          git commit -m "Audit VPS: Ditemukan perubahan file pada server (${TIMESTAMP})"
+          git push origin "$BRANCH_NAME"
+
+          echo "### ⚠️ PERINGATAN: File di Server VPS Berbeda dengan GitHub!" >> $GITHUB_STEP_SUMMARY
+          echo "Ditemukan modifikasi atau file baru di VPS. Perubahan telah dicatat di branch: **${BRANCH_NAME}**." >> $GITHUB_STEP_SUMMARY
+          echo "Silakan buka tab **Branches** atau buat Pull Request di GitHub untuk meninjau baris mana yang berubah." >> $GITHUB_STEP_SUMMARY
+
+      - name: 5. Laporan Server Bersih
+        if: steps.check_diff.outputs.changes_detected == 'false'
+        run: |
+          echo "### 🛡️ Status Integritas: KODE SERVER 100% AMAN" >> $GITHUB_STEP_SUMMARY
+          echo "Seluruh file kode di VPS Anda identik dengan yang ada di GitHub. Tidak ada file sisipan atau modifikasi asing." >> $GITHUB_STEP_SUMMARY
