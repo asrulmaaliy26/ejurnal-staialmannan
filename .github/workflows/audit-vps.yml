@@ -32,9 +32,9 @@ jobs:
           echo "=== MEMINDAI FILE SCRIPT ILEGAL DI FOLDER PUBLIC & CACHE ==="
           TARGET_DIR="${{ secrets.VPS_TARGET_DIR || '/home/staialmannan/ejurnal.staialmannan.ac.id/' }}"
           
-          # Periksa apakah ada file berekstensi script (.php, .phtml, .phar, .cgi, .pl) di dalam public/
+          # Periksa apakah ada file berekstensi script (.php, .phtml, .phar, .cgi, .pl) di public/ atau di cache/ (kecuali folder compile Smarty resmi)
           MALICIOUS_FILES=$(ssh -p ${{ secrets.VPS_PORT || '22' }} ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST || '72.61.143.19' }} \
-            "find ${TARGET_DIR}public/ ${TARGET_DIR}cache/ -type f \( -name '*.php*' -o -name '*.phtml' -o -name '*.phar' -o -name '*.cgi' -o -name '*.pl' \) 2>/dev/null || true")
+            "find ${TARGET_DIR}public/ -type f \( -name '*.php*' -o -name '*.phtml' -o -name '*.phar' -o -name '*.cgi' -o -name '*.pl' \) 2>/dev/null; find ${TARGET_DIR}cache/ -path '${TARGET_DIR}cache/t_compile*' -prune -o -path '${TARGET_DIR}cache/opcache*' -prune -o -type f \( -name '*.php*' -o -name '*.phtml' -o -name '*.phar' -o -name '*.cgi' -o -name '*.pl' \) -print 2>/dev/null || true")
 
           if [ -n "$MALICIOUS_FILES" ]; then
             echo "::error title=PERINGATAN KEAMANAN!::Ditemukan file script terlarang di folder public/cache:"

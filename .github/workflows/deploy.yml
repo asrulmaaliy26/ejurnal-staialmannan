@@ -58,6 +58,10 @@ jobs:
             rm -rf plugins/oaiMetadataFormats/rfc1807
             rm -rf lib/pkp/classes/form/validation/lib
             rm -rf lib/pkp/lib/vendor/altcha-org/altcha/src/SUMANTO
+            # 3. Bersihkan cache template agar perubahan tampilan (UI/CSS/TPL) langsung aktif
+            rm -rf cache/t_compile/*
+            rm -f cache/*.php
+            echo "Template and system cache refreshed!"
 
-            echo "VPS cleanup completed successfully!"
+            echo "VPS cleanup and cache refresh completed successfully!"
 
