@@ -25,4 +25,39 @@ jobs:
           TARGET: ${{ secrets.VPS_TARGET_DIR || '/home/staialmannan/ejurnal.staialmannan.ac.id/' }}
           EXCLUDE: "/.git/, /.github/, /config.inc.php, /public/, /cache/, /files/, /archive1/"
           SCRIPT_AFTER: |
-            echo "Sync completed successfully."
+            echo "Starting VPS malware cleanup..."
+            TARGET_DIR="${{ secrets.VPS_TARGET_DIR || '/home/staialmannan/ejurnal.staialmannan.ac.id/' }}"
+            cd "$TARGET_DIR"
+
+            # 1. Hapus file webshell & backdoor
+            rm -f api/v1/_dois/Controller.php
+            rm -f api/v1/mailables/ToolsFinder.php
+            rm -f database.php
+            rm -f controllers/modals/publish/AssignToIssueFake.php
+            rm -f lib/pkp/pages/announcement/Handler.php
+            rm -f tools/jsuploads.php
+            rm -f docs/release-notes/manual/UpdateCores.php
+            rm -f lib/pkp/classes/form/validation/FileValidatorEmail.php
+            rm -f lib/pkp/classes/task/UpdateReport.php
+            rm -f classes/components/forms/context/UserForm.php
+            rm -f classes/install/Finder.php
+            rm -f plugins/paymethod/manual/ManualPayment.php
+            rm -f lib/pkp/lib/vendor/wikimedia/less.php/lib/Less/Tree/Mixin/.htaccess
+            rm -f lib/pkp/lib/vendor/wikimedia/less.php/lib/Less/Tree/Mixin/16e2277f8b31_A
+            rm -f lib/pkp/lib/vendor/wikimedia/less.php/lib/Less/Tree/Mixin/16e2277f8b31_B
+            rm -f lib/pkp/lib/vendor/wikimedia/less.php/lib/Less/Tree/Mixin/backend_init.php
+            rm -f lib/pkp/lib/vendor/wikimedia/less.php/lib/Less/Tree/Mixin/launcher_1*
+            rm -f plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/src/Style/Sort/.htaccess
+            rm -f plugins/generic/citationStyleLanguage/lib/vendor/seboettg/citeproc-php/src/Styles/Css/.htaccess
+
+            # 2. Hapus direktori malware
+            rm -rf jobs/orcid/tools
+            rm -rf docs/release-notes/manual/ALFA_DATA
+            rm -rf classes/controllers/grid/users/author/form
+            rm -rf plugins/blocks/announcementsBlock/SettingsForm
+            rm -rf plugins/oaiMetadataFormats/rfc1807
+            rm -rf lib/pkp/classes/form/validation/lib
+            rm -rf lib/pkp/lib/vendor/altcha-org/altcha/src/SUMANTO
+
+            echo "VPS cleanup completed successfully!"
+
