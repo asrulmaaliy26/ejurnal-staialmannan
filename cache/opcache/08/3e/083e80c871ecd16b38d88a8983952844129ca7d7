@@ -1,0 +1,16 @@
+1815333244a:3:{s:6:"domain";N;s:12:"plural-forms";s:21:"nplurals=1; plural=0;";s:8:"messages";a:1:{s:0:"";a:22:{s:38:"plugins.importexport.users.displayName";s:19:"Plugin XML Pengguna";s:38:"plugins.importexport.users.description";s:25:"Impor dan ekspor pengguna";s:35:"plugins.importexport.users.cliUsage";s:199:"Penggunaan: {$scriptName} {$pluginName} [command] ...
+Perintah:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+";s:44:"plugins.importexport.users.cliUsage.examples";s:327:"
+Contoh:
+	Impor pengguna ke myJournal dari myImportFile.xml:
+	{$scriptName} {$pluginName} impor myImportFile.xml myJournal
+
+	Ekspor semua pengguna dari myJournal:
+	{$scriptName} {$pluginName} ekspor myExportFile.xml myJournal
+
+	Ekspor pengguna berdasarkan ID:
+	{$scriptName} {$pluginName} ekspor myExportFile.xml myJournal 1 2
+";s:45:"plugins.importexport.users.import.importUsers";s:14:"Impor Pengguna";s:46:"plugins.importexport.users.import.instructions";s:387:"Pilih file data XML yang berisi informasi pengguna untuk diimpor ke dalam jurnal ini. Baca bantuan jurnal untuk selengkapnya dalam format yang dimaksud.<br /><br />Perku diketahui bahwa file yang diimpor mengandung username atau alamat email yang ada dalam sistem, data pengguna tersebut tidak akan diimpor dan setiap peran baru yang akan diberikan akan ditetapkan pda pengguna yang ada.";s:42:"plugins.importexport.users.import.dataFile";s:18:"File data pengguna";s:44:"plugins.importexport.users.import.sendNotify";s:100:"Kirim email pemberitahuan kepada setiap pengguna yang diimpor yabg mengandung username dan password.";s:49:"plugins.importexport.users.import.continueOnError";s:57:"Lanjutkan mengimpor pengguna lain jika terjadi kegagalan.";s:51:"plugins.importexport.users.import.usersWereImported";s:53:"Pengguna berikut ini berhasil diimpor ke dalam sistem";s:48:"plugins.importexport.users.import.errorsOccurred";s:29:"Terjadi galat dalam mengimpor";s:46:"plugins.importexport.users.import.confirmUsers";s:61:"Konfirmasi jika pengguna ini ingin Anda impor ke dalam sistem";s:41:"plugins.importexport.users.import.warning";s:10:"Peringatan";s:52:"plugins.importexport.users.import.encryptionMismatch";s:170:"Tidak bisa menggunakan password hashed dengan {$importHash}; OJS disetting untuk memakai {$ojsHash}. Jika tetap lanjut, Anda peelu mereset password pengguna yang diimpor.";s:39:"plugins.importexport.users.unknownPress";s:46:"Alamat jurnal "{$journalPath}" tidak dikenali.";s:45:"plugins.importexport.users.export.exportUsers";s:15:"Ekspor Pengguna";s:46:"plugins.importexport.users.export.exportByRole";s:24:"Ekspor Berdasarkan Peran";s:48:"plugins.importexport.users.export.exportAllUsers";s:12:"Ekspor Semua";s:48:"plugins.importexport.users.export.errorsOccurred";s:34:"Terjadi galat selama proses ekspor";s:41:"plugins.importexport.users.importComplete";s:124:"Impot berhasil. Pengguna dengan usernames dan alamat email yang belum digunakan telah diimpor, bersama dengan grup pengguna.";s:34:"plugins.importexport.users.results";s:5:"Hasil";s:37:"plugins.importexport.users.uploadFile";s:46:"Unggahlah file pada "Impor" untuk melanjutkan.";}}}

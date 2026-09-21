@@ -1,0 +1,6 @@
+1800675417a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:4:{s:40:"emails.manualPaymentNotification.subject";s:39:"Benachrichtigung über manuelle Zahlung";s:37:"emails.manualPaymentNotification.body";s:389:"Eine manuelle Zahlung ist für die Zeitschrift {$contextName} und den/die Benutzer/in {$senderName} (Benutzer/innen-Name &quot;{$senderUsername}&quot;) angekündigt worden.<br />
+<br />
+Gezahlt werden soll für &quot;{$paymentName}&quot;.<br />
+Die Kosten betragen {$paymentAmount} ({$paymentCurrencyCode}).<br />
+<br />
+Diese E-Mail wurde vom OJS-Plugin Manuelle Gebührenzahlung erzeugt.";s:44:"emails.manualPaymentNotification.description";s:148:"Diese E-Mail-Vorlage wird genutzt, um eine/n Zeitschriftenverwalter/in darüber zu benachrichtigen, dass eine manuelle Zahlung beantragt worden ist.";s:57:"emailTemplate.variable.manualPaymentPlugin.senderUsername";s:54:"Der Username der Person, die die Zahlung getätigt hat";}}}

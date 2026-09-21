@@ -1,0 +1,182 @@
+1815325212a:3:{s:6:"domain";N;s:12:"plural-forms";s:21:"nplurals=1; plural=0;";s:8:"messages";a:1:{s:0:"";a:70:{s:35:"emails.passwordResetConfirm.subject";s:22:"Konfirmasi Reset Sandi";s:32:"emails.passwordResetConfirm.body";s:346:"Kami menerima permintaan reset sandi untuk akun Anda di website {$siteTitle}.<br />
+<br />
+Jika Anda tidak merasa mengajukan permintaan ini, abaikan pesan ini dan sandi Anda tidak akan diubah. Jika Anda memang ingin melakukan reset sandi, klik tautan berikut ini.<br />
+<br />
+Reset sandi saya: {$passwordResetUrl}<br />
+<br />
+{$siteContactName}";s:27:"emails.userRegister.subject";s:17:"Registrasi Jurnal";s:24:"emails.userRegister.body";s:422:"{$recipientName}<br />
+<br />
+Anda sekarang telah terdaftar sebagai pengguna di {$contextName}. Kami sertakan nama pengguna dan sandi Anda di email ini, keduanya diperlukan untuk semua kegiatan melalui website jurnal ini. Anda dapat keluar dari daftar pengguna jurnal kapan saja dengan menghubungi kami.<br />
+<br />
+Nama pengguna: {$recipientUsername}<br />
+Sandi: {$password}<br />
+<br />
+Terimakasih,<br />
+{$signature}";s:34:"emails.userValidateContext.subject";s:18:"Validasi Akun Anda";s:31:"emails.userValidateContext.body";s:269:"{$recipientName}<br />
+<br />
+Anda telah membuat akun di {$contextName}. Sebelum dapat menggunakannya, Anda perlu melakukan validasi akun email. Untuk melakukannya, klik tautan berikut ini:<br />
+<br />
+{$activateUrl}<br />
+<br />
+Terimakasih,<br />
+{$contextSignature}";s:31:"emails.userValidateSite.subject";s:18:"Validasi Akun Kamu";s:28:"emails.userValidateSite.body";s:274:"{$recipientName}<br />
+<br />
+Kamu berhasi membuat akun paaa {$siteTitle}, tapi sebelum bisa menggunakannya, validasi akun email kamu terlebih dahulu dengan mengikuti petunjuk pada tautan berikut:<br />
+<br />
+{$activateUrl}<br />
+<br />
+Terima kasih,<br />
+{$siteSignature}";s:31:"emails.reviewerRegister.subject";s:45:"Registrasi sebagai Reviewer di {$contextName}";s:28:"emails.reviewerRegister.body";s:817:"<p>Yth {$recipientName},</p><p>Dengan mempertimbangkan keahlian Anda, kami memasukkan nama Anda dalam database reviewer di {$contextName}. THal ini tidak bersifat mengikat, hanya sekedar memudahkan kami untuk mengundang Anda untuk melakukan review terhadap suatu naskah. Ketika memperoleh undangan untuk melakukan review suatu naskah, Anda dapat melihat judul dan abstrak naskah tersebut, dan Anda berhak menentukan apakah akan menerima atau menolak undangan tersebut. Anda juga dapat meminta nama Anda dihapus dari daftar reviewer.</p><p>Kami menyertakan nama pengguna dan sandi Anda, yang digunakan dalam semua interaksi dengan jurnal melalui website. Anda dapat melakukan update profil, termasuk minat review Anda.</p><p>Username: {$recipientUsername}<br />Password: {$password}</p><p>Terima kasih,</p>{$signature}";s:33:"emails.issuePublishNotify.subject";s:72:"Terbitan baru telah tersedia: {$issueIdentification} dari {$contextName}";s:30:"emails.issuePublishNotify.body";s:478:"<p>Yang terhormat {$recipientName},</p><p>Dengan senang hati kami umumkan penerbitan <a href="{$issueUrl}">{$issueIdentification}</a> karya {$contextName}. Kami mengundang Anda untuk membaca dan berbagi karya ini dengan komunitas akademis Anda.</p><p>Terima kasih banyak kepada para penulis, pengulas, dan editor kami atas kontribusi mereka yang berharga, dan kepada para pembaca kami atas minat Anda yang berkelanjutan.</p><div>{$issueToc}</div><p>Terima kasih,</p>{$signature}";s:27:"emails.editorAssign.subject";s:69:"Anda telah ditugaskan sebagai editor untuk naskah pada {$contextName}";s:24:"emails.editorAssign.body";s:567:"<p>Yth. {$recipientName},</p><p>Naskah berikut telah ditugaskan kepada Anda untuk diperiksa melalui proses editorial.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Jika telah sesuai dengan {$contextName}, lanjutkan naskah tersebut ke tahap dengan memilih "Kirim ke Taha Review" lalu tugaskan seorang mitra bestari dengan mengklik "Tambahkan Mitra Bestari".</p><p>Jika tidak sesuai dengan ketentuan jurnal, silakan naskah ditolak.</p><p>Terima kasih.</p><p>Salam hormat,</p>{$contextSignature}";s:30:"emails.editorAssignReview.body";s:489:"<p>Yth {$recipientName},</p><p>Naskah berikut telah ditugaskan kepada Anda untuk ditangani selama proses review.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstrak</b></p>{$submissionAbstract}<p>Silakan login untuk <a href="{$submissionUrl}">melihat naskah</a> dan tugaskan mitra bestari yang sesuai kualifikasi. Anda bisa menugaskan seorang mitra bestari dengan mengklik "Tambah Mitra Bestari".</p><p>Terima kasih.</p><p>Salam Hormat,</p>{$signature}";s:34:"emails.editorAssignProduction.body";s:564:"<p>Yth {$recipientName},</p><p>Naskah berikut telah ditugaskan kepada Anda untuk ditangani selama tahap produksi.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstrak</b></p>{$submissionAbstract}<p>Silakan login untuk <a href="{$submissionUrl}">melihat naskah</a>. Bila file produksi telah siap, silakan unggah ke bagian <strong>Publikasi > Galei</strong>. Selanjutnya jadwalkan naskah untuk diterbitkan dengan mengklik tombol <strong>Jadwalkan untuk Diterbitkan</strong>.</p><p>Terima kasih.</p><p>Salam Hormat,</p>{$signature}";s:28:"emails.reviewRequest.subject";s:17:"Undangan mereview";s:25:"emails.reviewRequest.body";s:931:"<p>Yth. {$recipientName},</p><p>Kami memandang bahwa Anda merupakan reviewer yang tepat untuk naskah {$contextName}. Abstrak dan judul naskah tersebut disertakan di bawah ini, dan kami berharap Anda berkenan melakukannya.</p><p>Jika Anda berkenan mereview naskah ini, batas waktu yang ditentapkan adalah {$reviewDueDate}. Silakan login ke web jurnal untuk melihat, mengunggah file review, dan mengirimkan hasil telaah Anda dan ikuti langkah pada tautan berikut.</p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstrak</b></p>{$submissionAbstract}<p>Silakan merespon dengan memilih <a href="{$reviewAssignmentUrl}">menerima atau menolak</a> permintaan review sebelum <b>{$responseDueDate}</b></p><p>Silakan hubungi saya bila ada pertanyaan terkait naskah atau proses review.</p><p>Terima kasih telah mempertimbangkan permintaan kami. Bantuan Anda sangat berharga bagi Kami.</p><p>Salam hormat,</p>{$signature}";s:40:"emails.reviewResponseOverdueAuto.subject";s:41:"Apakah Anda bersedia mereview naskah ini?";s:37:"emails.reviewResponseOverdueAuto.body";s:1098:"<p>Yang terhormat {$recipientName},</p><p>Email ini merupakan pengingat otomatis dari {$contextName} sehubungan dengan permintaan kami untuk meninjau kiriman, "{$submissionTitle}."</p><p>Anda menerima email ini karena kami belum menerima konfirmasi dari Anda yang menunjukkan apakah Anda dapat melakukan peninjauan kiriman ini atau tidak.</p><p>Harap beri tahu kami apakah Anda dapat melakukan peninjauan ini atau tidak dengan menggunakan perangkat lunak manajemen kiriman kami untuk menerima atau menolak permintaan ini.</p><p>Jika Anda dapat meninjau kiriman ini, peninjauan Anda harus dilakukan paling lambat {$reviewDueDate}. Anda dapat mengikuti langkah-langkah peninjauan untuk melihat kiriman, mengunggah berkas peninjauan, dan mengirimkan komentar peninjauan Anda.</p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstract</b></p>{$submissionAbstract}<p>Silakan hubungi saya jika ada pertanyaan tentang kiriman atau proses peninjauan.</p><p>Terima kasih telah mempertimbangkan permintaan ini. Bantuan Anda sangat kami hargai.</p><p>Salam hormat,</p>{$contextSignature}";s:38:"emails.reviewRequestSubsequent.subject";s:45:"Permintaan untuk mereview naskah hasil revisi";s:35:"emails.reviewRequestSubsequent.body";s:957:"<p>Yang terhormat {$recipientName},</p><p>Terima kasih telah mereview <a href="{$reviewAssignmentUrl}">{$submissionTitle}</a>. Penulis telah mempertimbangkan saran mitra bestari dan saat ini telah mengirimkan versi revisi naskahnya. Kami menghubungi untuk menanyakan apakah Anda bersedia mereview pada putaran kedua untuk naskah ini.</p><p>Jika bersedia, batas waktu review berakhir sebelum {$reviewDueDate}. Anda dapat <a href="{$reviewAssignmentUrl}">mengikuti tahapan review</a> untuk melihat naskah, mengunggah file review, dan mengirimkan komentar Anda.<p><p><a href="{$reviewAssignmentUrl }"{$submissionTitle}</a></p><p>Abstrak</p>{$submissionAbstract}<p>Harap terima atau tolak permintaan review sebelum {$responseDueDate}.</p><p>Jangan sungkan menghubungi saya jika ada pertanyaan terkait naskah atau proses review.</p><p>Terima kasih telah mempertimbangkan permintaan kami. Bantuan Anda sangat berharga bagi kami.</p><p>Hormat kami,</p>{$signature}";s:27:"emails.reviewCancel.subject";s:28:"Permohonan Review Dibatalkan";s:24:"emails.reviewCancel.body";s:365:"<p>Yth {$recipientName},</p><p>Kami memutuskan untuk membatalkan permohonan review kami kepada Anda untuk naskah {$submissionTitle} pada {$contextName}.</p><p> Kami mohon maaf sebesar-besarnya untuk ketidaknyamanan ini dan kami harap di masa mendatang Anda dapat membantu proses review di jurnal ini.</p><p>Jika ada pertanyaan, silakan hubungi kami.</p>{$signature}";s:30:"emails.reviewReinstate.subject";s:51:"Bersediakah Anda mereview lagi pada {$contextName}?";s:27:"emails.reviewReinstate.body";s:526:"<p>Yang terhotmat {$recipientName}:</p><p>Kami membatalkan permintaan review kepada Anda untuk menelaah naskah, {$submissionTitle}, untuk {$contextName}. Kami mengubah keputusan dan kami berharap Anda tetap dapat membantu proses review jurnal kami.</p><p>Jika Anda bisa membantu review naskah ini, Anda bisa <a href="{$reviewAssignmentUrl}">login ke jurnal</a> untuk mereview naskah, unggah hasil review, dan mengirim permintaan review Anda.</p><p>Jika ada pertanyaan, silakan hubungi saya.</p><p>Salam Hormat,</p>{$signature}";s:28:"emails.reviewDecline.subject";s:28:"Tidak Dapat Melakukan Review";s:25:"emails.reviewDecline.body";s:264:"Editor:<br />
+<br />
+Mohon maaf saat ini saya tidak dapat melakukan review terhadap naskah, &quot;{$submissionTitle},&quot; untuk {$contextName}. Terimakasih telah mempercayakann kepada saya, dan lain waktu silakan menghubungi saya lagi.<br />
+<br />
+{$senderName}";s:27:"emails.reviewRemind.subject";s:47:"Pengingat untuk menyelesaikan tugas review Anda";s:24:"emails.reviewRemind.body";s:617:"<p> Yth {$recipientName},</p><p>Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, "{$submissionTitle}," untuk {$contextName}. Kami mengharapkan telah menerima review ini pada {$reviewDueDate}, dan akan sangat berbahagia bila Anda dapat menyelesaikannya.</p><p>Silakan <a href="{$reviewAssignmentUrl}">login ke jurnal</a> dan ikuti petunjuk review untuk melihat naskah, mengunggah file review, serta mengirim komentar review.</p><p>Jika butuh tambahan waktu, silakan hubungi saya. Kami menunggu tanggapan Anda.</p><p>Terima kasih atas perhatian Anda dan salam hormat,</p>{$signature}";s:31:"emails.reviewRemindAuto.subject";s:41:"Pengingat untuk menyelesaikan review Anda";s:28:"emails.reviewRemindAuto.body";s:618:"<p>Yth {$recipientName}:</p><p>Sekedar mengingatkan tentang permohonan kami untuk melakukan review terhadap naskah, "{$submissionTitle}" untuk {$contextName}. </p><p>Kami mengharapkan telah menerima review ini pada {$reviewDueDate} dan kami berterima kasih bila dapat menyelesaikannya lebih awal.</p><p>Silakan <a href="{$reviewAssignmentUrl}">login ke jurnal</a> dan ikuti tahapan untuk melihat naskah, mengunggah file review, dan mwnambahkana komentar review.</p><p>Jika Anda membutuhkan tambahan waktu, silakan hubungi saya. Kami menunggu kabar dari Anda.</p><p>Terima kasih dan salam hormat,</p>{$contextSignature}";s:35:"emails.editorDecisionAccept.subject";s:46:"Naskah Anda telah diterima pada {$contextName}";s:32:"emails.editorDecisionAccept.body";s:1001:"<p>Yang terhormat {$recipientName},</p><p>Dengan senang hati saya informasikan bahwa kami telah memutuskan untuk menerima naskha Anda tanpa revisi lebih lanjut. Setelah review matang, kami memutuskan bahwa naskah Anda, {$submissionTitle}, memenuhi atau melebihi harapan kami. Kami sangat senang untuk menerbitkan artikel Anda di {$contextName} dan kami berterima kasih telah memilih jurnal kami sebagai tempat untuk karya Anda.</p><p>Naskah Anda sedang masuk edisi forthcoming dalam edisi {$contextName} dan Anda dipersilakan untuk memasukkannya ke dalam daftar publikasi Anda. Kami menghargai kerja keras untuk setiap karya dan mengucapkan selamat kepada Anda karena telah mencapai tahap ini.</p><p>Artikel Anda sedang dalam tahap pengeditan dan pemformatan salinan agas siap diterbitkan.</p><p >Anda akan segera menerima petunjuk lebih lanjut.</p><p>Jika memiliki pertanyaan, silakan hubungi saya melalui <a href="{$authorSubmissionUrl}">dashbord naskah</a> Anda.</p><p >Hormat kami,</p>{$signature}";s:39:"emails.editorDecisionSkipReview.subject";s:50:"Naskah Anda telah dikirim untuk proses copyediting";s:36:"emails.editorDecisionSkipReview.body";s:957:"<p>Yth. {$recipientName},</p>
+<p>Dengan senang hati kami menginformasikan bahwa kami telah memutuskan menerima naskah Anda tanpa melalui proses review. Naskah Anda, {$submissionTitle}, telah memenuhi ketentuan jurnal, dan tidak perlu melewati proses tersebut. Kami senang menerbitkan karya Anda di {$contextName} dan terima kasih atas pilihan ANda memilih jurnal kami sebagai media publikasi karya Anda.</p>
+Naskah Anda sekarang berstatus Akan terbit papa nomor {$contextName} dan membolehkan anda menambahkannya ke dalam daftar publikasi Anda. Kami menghargai kerja keras yang telah berhasil diterima dan selamat atas pencapaian Anda.</p>
+<p>Naskah Anda selanjutnay akan melalui proses copy edit dan pengaturan format agar siap diterbitkan. </p>
+<p>Kami akan segera mengirimkan panduan lanjutan.</p>
+<p>Jika ada pertanyaan, silakan hubungi saya melalui <a href="{$authorSubmissionUrl}">dashboar naskah</a> Anda.</p>
+<p>Hormat Kami,</p>
+<p>{$signature}</p>
+";s:28:"emails.layoutRequest.subject";s:74:"Naskah {$submissionId} siap masuk ke tahap produksi pada {$contextAcronym}";s:25:"emails.layoutRequest.body";s:617:"<p>Yth. {$recipientName},</p><p>Naskah baru telah siap proses layout editing:</p><p><a href="{$submissionUrl}">{$submissionId} — {$submissionTitle}</a><br />{$contextName}</p><ol><li>Klik URL Naskah di atas.</li><li>Unduh file Siap Cetak dan gunakan untuk membuat galley sesuai aturan jurnal.</li><li>Unggah galley ke bagian Publikasi naskah.</li><li>Gunakan fitur Diskusi Produksi untuk memberitahu editor bahwa file galley sudah siap.</li></ol><p>Jika tidak bisa mengerjakan sekarang atau ada pertanyaan, silakan hubungi saya. Terima kasih atas kontribusinya kepada jurnal ini.</p><p>Salam hormat,</p>{$signature}";s:29:"emails.layoutComplete.subject";s:14:"Galley Selesai";s:26:"emails.layoutComplete.body";s:305:"<p>Yang terhormat {$recipientName},</p><p>Galley kini telah disiapkan untuk pengiriman berikut dan siap untuk peninjauan akhir.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$contextName}</p><p>Jika Anda memiliki pertanyaan, silakan hubungi saya.</p><p>Salam hormat,</p><p>{$signature}</p>";s:24:"emails.emailLink.subject";s:29:"Artikel yang Mungkin Diminati";s:21:"emails.emailLink.body";s:190:"Anda mungkin tertarik dengan &quot;{$submissionTitle}&quot; oleh {$authors} diterbitkan di Vol {$volume}, No {$number} ({$year}) {$contextName} yang tersedia di &quot;{$submissionUrl}&quot;.";s:28:"emails.emailLink.description";s:246:"Template email ini memungkinkan pembaca terdaftar mengirimkan informasi tentang suatu artikel kepada seseorang yang mungkin akan tertarik. Email ini tersedia di Alat Baca dan harus diaktifkan oleh Manajer Jurnal di halaman Administrasi Alat Baca.";s:33:"emails.subscriptionNotify.subject";s:23:"Pemberitahuan Langganan";s:30:"emails.subscriptionNotify.body";s:720:"{$recipientName}:<br />
+<br />
+Anda sekarang telah terdaftar sebagai pelanggan di sistem manajemen jurnal online kami, {$contextName}, dengan jenis langganan:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+Untuk mengakses konten yang hanya tersedia bagi pelanggan, silakan login ke sistem dengan menggunakan nama pengguna Anda, &quot;{$recipientUsername}&quot;.<br />
+<br />
+Setelah login, Anda dapat mengubah detail profil Anda dan sandi Anda kapanpun Anda kehendaki.<br />
+<br />
+Jika Anda memiliki langganan institusi, pengguna di institusi Anda tidak perlu login karena semua akses secara otomatis diotentikasi oleh sistem.<br />
+<br />
+Jika ada pertanyaan, silakan hubungi kami.<br />
+<br />
+{$subscriptionSignature}";s:31:"emails.openAccessNotify.subject";s:84:"Gratis dibaca: {$issueIdentification} of {$contextName} sudah akses terbuka sekarang";s:28:"emails.openAccessNotify.body";s:302:"<p>Yth {$recipientName},</p><p>Dengan senang hati kami informasikan bahwa <a href="{$issueUrl}">{$issueIdentification}</a> dari {$contextName} telah menjadikan terbitan Open Access. Langganan tidak diperlukan lagi untuk membaca terbitan ini.</p><p>Terima kasih atas perhatiannya.</p>{$contextSignature}";s:39:"emails.subscriptionBeforeExpiry.subject";s:40:"Pemberitahuan Tanggal Berakhir Langganan";s:36:"emails.subscriptionBeforeExpiry.body";s:440:"{$recipientName}:<br />
+<br />
+Langganan {$contextName} Anda hampir berakhir.<br />
+<br />
+{$subscriptionType}<br />
+Tanggal berakhir: {$expiryDate}<br />
+<br />
+Untuk terus memperoleh akses ke jurnal ini, silakan kunjungi website jurnal dan perbaharui langganan. Anda dapat login menggunakan nama pengguna Anda, &quot;{$recipientUsername}&quot;.<br />
+<br />
+Jika ada pertanyaan, silakan hubungi kami.<br />
+<br />
+{$subscriptionSignature}";s:38:"emails.subscriptionAfterExpiry.subject";s:18:"Langganan Berakhir";s:35:"emails.subscriptionAfterExpiry.body";s:413:"{$recipientName}:<br />
+<br />
+Langganan {$contextName} Anda telah berakhir.<br />
+<br />
+{$subscriptionType}<br />
+Tanggal berakhir: {$expiryDate}<br />
+<br />
+Untuk memperbaharui langganan Anda, silakan kunjungi website jurnal. Anda dapat login dengan menggunakan nama pengguna Anda, &quot;{$recipientUsername}&quot;.<br />
+<br />
+Jika ada pertanyaan, silakan hubungi kami.<br />
+<br />
+{$subscriptionSignature}";s:42:"emails.subscriptionAfterExpiryLast.subject";s:39:"Langganan Berakhir - Pengingat Terakhir";s:39:"emails.subscriptionAfterExpiryLast.body";s:478:"{$recipientName}:<br />
+<br />
+Langganan {$contextName} Anda telah berakhir.<br />
+Ini adalah pengingat terakhir yang diemailkan kepada Anda.<br />
+<br />
+{$subscriptionType}<br />
+Tanggal berakhir: {$expiryDate}<br />
+<br />
+Untuk memperbaharui langganan Anda, silakan kunjungi website jurnal. Anda dapat login dengan menggunakan nama pengguna Anda, &quot;{$recipientUsername}&quot;.<br />
+<br />
+Jika ada pertanyaan, silakan hubungi kami.<br />
+<br />
+{$subscriptionSignature}";s:39:"emails.subscriptionPurchaseIndl.subject";s:29:"Pembelian Langganan: Individu";s:36:"emails.subscriptionPurchaseIndl.body";s:406:"Sebuah langganan individu telah dibeli online untuk {$contextName} dengan rincian berikut.<br />
+<br />
+Jenis Langganan:<br />
+{$subscriptionType}<br />
+<br />
+Pengguna:<br />
+{$subscriberDetails}<br />
+<br />
+Informasi Keanggotaan (jika ada):<br />
+{$membership}<br />
+<br />
+Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
+<br />
+URL Langganan: {$subscriptionUrl}<br />
+";s:40:"emails.subscriptionPurchaseInstl.subject";s:30:"Pembelian Langganan: Institusi";s:37:"emails.subscriptionPurchaseInstl.body";s:703:"Sebuah langganan institusi telah dibeli online untuk {$contextName} dengan rincian berikut. Untuk mengaktifkan langganan ini, silakan gunakan URL Langganan dan jadikan status langganan ke 'Aktif'.<br />
+<br />
+Jenis Langganan:<br />
+{$subscriptionType}<br />
+<br />
+Institusi:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (jika ada):<br />
+{$domain}<br />
+<br />
+IP Ranges (jika ada):<br />
+{$ipRanges}<br />
+<br />
+Contact Person:<br />
+{$subscriberDetails}<br />
+<br />
+Informasi Keanggotaan (jika ada):<br />
+{$membership}<br />
+<br />
+Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
+<br />
+URL Langganan: {$subscriptionUrl}<br />
+";s:36:"emails.subscriptionRenewIndl.subject";s:31:"Pembaharuan Langganan: Individu";s:33:"emails.subscriptionRenewIndl.body";s:412:"Sebuah langganan individu telah diperbaharui online untuk {$contextName} dengan rincian berikut.<br />
+<br />
+Jenis Langganan:<br />
+{$subscriptionType}<br />
+<br />
+Pengguna:<br />
+{$subscriberDetails}<br />
+<br />
+Informasi Keanggotaan (jika ada):<br />
+{$membership}<br />
+<br />
+Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
+<br />
+URL Langganan: {$subscriptionUrl}<br />
+";s:37:"emails.subscriptionRenewInstl.subject";s:32:"Pembaharuan Langganan: Institusi";s:34:"emails.subscriptionRenewInstl.body";s:604:"Sebuah langganan institusi telah diperbaharui online untuk {$contextName} dengan rincian berikut.<br />
+<br />
+Jenis Langganan:<br />
+{$subscriptionType}<br />
+<br />
+Institusi:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (jika ada):<br />
+{$domain}<br />
+<br />
+IP Ranges (jika ada):<br />
+{$ipRanges}<br />
+<br />
+Contact Person:<br />
+{$subscriberDetails}<br />
+<br />
+Informasi Keanggotaan (jika ada):<br />
+{$membership}<br />
+<br />
+Untuk melihat atau mengubah langganan ini, silakan gunakan URL berikut ini.<br />
+<br />
+URL Langganan: {$subscriptionUrl}<br />
+";s:35:"emails.revisedVersionNotify.subject";s:27:"Versi Revisi telah Diunggah";s:32:"emails.revisedVersionNotify.body";s:386:"<p>Yth {$recipientName},</p><p>Penulis telah mengunggah revisi naskahnya, <b>{$authorsShort} — {$submissionTitle}</b>. <p>Sebagai.editorp, silakan login dan <a href="{$submissionUrl}">periksa revisinya</a> dan ambil keputusan apakah menerima, menolak, atau kirim.naskah untuk direview lebih lanjut.</p><br><br>—<br>Ini pesan otomatis dari <a href="{$contextUrl}">{$contextName}</a>.";s:43:"emails.statisticsReportNotification.subject";s:41:"Kegiatan redaksi selama {$month}, {$year}";s:40:"emails.statisticsReportNotification.body";s:687:"
+{$recipientName}, <br />
+<br />
+Laporan kondisi jurnal Anda untuk {$month}, {$year} sudah tersedia. Statistik utama Anda bulan ini tersaji sebagai berikut.<br />
+<ul>
+	<li>Naskah baru yang masuk bulan ini: {$newSubmissions}</li>
+	<li>Naskah ditolak bulan ini: {$declinedSubmissions}</li>
+	<li>Naskah yang diterima bulan ini: {$acceptedSubmissions}</li>
+	<li>Total naskah dalam sistem: {$totalSubmissions}</li>
+</ul>
+Selengkapnya, login untuk melihat <a href="{$editorialStatsLink}">kecenderungan editorial</a> dan <a href="{$publicationStatsLink}">statistik artikel yang dipublikasikan</a>. Salinan lengkap trend bulan ini terlampir.<br />
+<br />
+Salam Hormat,<br />
+{$contextSignature}";s:27:"emails.announcement.subject";s:20:"{$announcementTitle}";s:24:"emails.announcement.body";s:170:"<b>{$announcementTitle}</b><br />
+<br />
+{$announcementSummary}<br />
+<br />
+Kunjungi website kami untuk melihat <a href="{$announcementUrl}">pengumuman selengkapnya</a>.";s:41:"emails.paymentRequestNotification.subject";s:32:"Notifikasi Permintaan Pembayaran";s:38:"emails.paymentRequestNotification.body";s:459:"<p>Yth {$recipientName},</p><p>Selamat atas diterimanya naskah Anda, {$submissionTitle}, pada {$contextName}. Saat ini, naskah terlah diterima, kami meminta Anda untuk melakukan pembayaran biaya publikasi.</p><p>Biaya ini mencakup biaya produksi hingga publikasi. Untuk melakukan pembayaran, buka halaman <a href="{$queuedPaymentUrl}">{$queuedPaymentUrl}</a>.</p><p>Jika ada pertanyaan, silakan buka <a href="{$submissionGuidelinesUrl}">Panduan Naskah</a></p>";s:40:"emails.paymentRequestNotification.footer";s:82:"<br><br>—<br>Pesan ini otomatis dari <a href="{$contextUrl}">{$contextName}</a>.";}}}

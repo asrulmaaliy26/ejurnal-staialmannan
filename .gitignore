@@ -1,0 +1,26 @@
+# File Sensitif & Konfigurasi Server
+config.inc.php
+error_log
+
+# Database Dump
+*.sql
+*.sql.gz
+
+# File Arsip & Backup
+*.zip
+*.tar.gz
+Archive1.zip
+
+# Cache OJS (Wajib di-ignore agar tidak conflict)
+cache/t_compile/*
+cache/*.php
+!cache/index.html
+!cache/.htaccess
+
+# Public Uploads (Cover jurnal, logo, dsb.)
+public/*
+!public/index.html
+
+# Node & Composer (jika ada build)
+node_modules/
+vendor/

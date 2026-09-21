@@ -1,0 +1,15 @@
+1795613776a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:12:{s:41:"plugins.importexport.datacite.displayName";s:34:"DataCite export/registratie plugin";s:41:"plugins.importexport.datacite.description";s:110:"Exporteer of registreer metadata van nummers, artikelen, proeven en aanvullende bestanden in DataCite formaat.";s:50:"plugins.importexport.datacite.settings.description";s:72:"Configureer de DataCite export plugin voor u ze voor het eerst gebruikt.";s:35:"plugins.importexport.datacite.intro";s:749:"
+		Als u DOI's wilt registreren bij DataCite,  neem dan contact op met de Managing
+		Agent via de <a href="http://datacite.org/contact" target="_blank">DataCite
+		homepage</a>. Die zal u in contact brengen met uw lokale DataCite vertegenwoordiger. Zodra u een
+		relatie met hen heeft , krijgt u 
+		toegang tot DataCite voor het maken van persistente identificaties (DOI's)
+		en het registreren van de bijbehorende metadata. Al u geen eigen gebruikersnaam en
+		wachtwoord hebt kunt u nog steeds exporteren naar het DataCite XML formaat maar u 
+		kunt uw DOI's niet registreren bij DataCite vanuit OJS.
+		Merk op dat het wachtwoord als leesbare tekst opgeslagen wordt, bus niet versleuteld, vanwege
+		de vereisten van de DataCite registratie dienst.
+	";s:52:"plugins.importexport.datacite.settings.form.username";s:23:"Gebruikersnaam (symbol)";s:60:"plugins.importexport.datacite.settings.form.usernameRequired";s:116:"Geef de gebruikersnaam (symbool) die u van DataCite hebt gekregen. De gebruikersnaam mag geen dubbele punt bevatten.";s:77:"plugins.importexport.datacite.settings.form.automaticRegistration.description";s:184:"OJS zal toegewezen DOI's na publicatie automatisch deponeren bij DataCite. Dit kan even duren (bv. afhankelijk van uw cronjob instellingen). U kan alle ongeregistreerde DOI's bekijken.";s:64:"plugins.importexport.datacite.settings.form.testMode.description";s:131:"Gebruik het DataCite test prefix voor de DOI deposit. Vergeet deze test-optie niet te verwijderen voor de uiteindelijke publicatie.";s:57:"plugins.importexport.datacite.settings.form.testDOIPrefix";s:20:"Test DOI voorvoegsel";s:65:"plugins.importexport.datacite.settings.form.testDOIPrefixRequired";s:112:"Een test DOI voorvoegsel is verplicht wanneer de "gebruik testvoorvoegsel voor DOI registratie" is geselecteerd.";s:45:"plugins.importexport.datacite.senderTask.name";s:37:"Automatische registratie bij DataCite";s:38:"plugins.importexport.datacite.cliUsage";s:232:"Gebruik:
+{$scriptName} {$pluginName} export [outputFileName] [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+{$scriptName} {$pluginName} register [journal_path] {issues|articles|galleys} objectId1 [objectId2] ...
+";}}}

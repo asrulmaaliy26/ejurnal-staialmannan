@@ -1,0 +1,1 @@
+1803111350a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:2:{s:34:"plugins.oaiMetadata.dc.displayName";s:23:"Formato de metadatos DC";s:34:"plugins.oaiMetadata.dc.description";s:84:"Estructura los metadatos de manera que sean consistentes con el formato Dublin Core.";}}}

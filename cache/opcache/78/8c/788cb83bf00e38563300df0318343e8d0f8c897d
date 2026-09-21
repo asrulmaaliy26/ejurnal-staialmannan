@@ -1,0 +1,1 @@
+1799813725a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:2:{s:39:"plugins.OAIMetadata.marcxml.displayName";s:27:"Formato dei metadati MARC21";s:39:"plugins.OAIMetadata.marcxml.description";s:61:"Struttura i metadati in maniera confacente al formato MARC21.";}}}

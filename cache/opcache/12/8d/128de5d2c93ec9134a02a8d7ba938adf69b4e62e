@@ -1,0 +1,1 @@
+1799813725a:3:{s:6:"domain";N;s:12:"plural-forms";N;s:8:"messages";a:1:{s:0:"";a:3:{s:36:"plugins.reports.articles.displayName";s:21:"Report sugli articoli";s:36:"plugins.reports.articles.description";s:86:"Questo plugin genera un file CSV contenente una lista di articoli e loro informazioni.";s:35:"plugins.reports.articles.nodecision";s:17:"Nessuna decisione";}}}

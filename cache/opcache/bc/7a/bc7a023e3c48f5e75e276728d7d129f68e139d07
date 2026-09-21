@@ -1,0 +1,23 @@
+1799813664a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:23:{s:39:"plugins.importexport.native.displayName";s:17:"Native XML plugin";s:39:"plugins.importexport.native.description";s:71:"Importeer en exporteer artikelen en nummers in het XML formaat van OJS.";s:34:"plugins.importexport.native.import";s:9:"Importeer";s:47:"plugins.importexport.native.import.instructions";s:39:"Upload een XML bestand om te importeren";s:51:"plugins.importexport.native.exportSubmissionsSelect";s:36:"Selecteer artikelen om te exporteren";s:45:"plugins.importexport.native.exportSubmissions";s:19:"Exporteer artikelen";s:40:"plugins.importexport.native.exportIssues";s:17:"Exporteer nummers";s:35:"plugins.importexport.native.results";s:10:"Resultaten";s:38:"plugins.inportexport.native.uploadFile";s:44:"Laad eerst een bestand op onder "Importeer".";s:42:"plugins.importexport.native.importComplete";s:66:"De import is goed uitgevoerd. Volgende items werden geïmporteerd:";s:36:"plugins.importexport.native.cliUsage";s:1029:"Gebruik: {$scriptName} {$pluginName} [commando] ...
+Commando's:
+	import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam] ...
+	export [xmlBestandsNaam] [tijdschriftPad] articles [artikelId1] [artikelId2] ...
+	export [xmlBestandsNaam] [tijdschriftPad] article [artikelId]
+	export [xmlBestandsNaam] [tijdschriftPad] issues [nummerId1] [nummerId2] ...
+	export [xmlBestandsNaam] [tijdschriftPad] issue [nummerId]
+
+Om data te importeren zijn bijkomende parameters nodig, afhankelijk van het 
+hoofdelement van het XML document.
+
+Als het hoofdelement <article> of <articles> is, zijn bijkomende parameters vereist. 
+Volgende formaten worden geaccepteerd:
+
+{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam]
+	issue_id [nummerId] section_id [sectieId]
+
+{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad] [gebruikersnaam]
+	issue_id [nummerId] section_name [naam]
+
+{$scriptName} {$pluginName} import [xmlBestandsNaam] [tijdschriftPad]
+	issue_id [nummerId] section_abbrev [afkorting]
+";s:48:"plugins.importexport.native.error.unknownSection";s:25:"Onbekende sectie {$param}";s:45:"plugins.importexport.native.error.unknownUser";s:100:"Er moet een gebruiker aangegeven worden door gebruik van de --user_name parameter of het -u command.";s:61:"plugins.importexport.native.import.error.sectionTitleMismatch";s:153:"De sectietitels van "{$section1Title}" en "{$section2Title}" in het nummer "{$issueTitle}" komen overeen met de verschillende secties in het tijdschrift.";s:58:"plugins.importexport.native.import.error.sectionTitleMatch";s:223:"De sectietitel "{$sectionTitle}" in het nummer "{$issueTitle}" komt overeen met een bestaande tijdschriftsectie, maar een andere titel van deze sectie komt niet overeen met een andere titel van de huidige tijdschriftsectie.";s:62:"plugins.importexport.native.import.error.sectionAbbrevMismatch";s:162:"De afkortingen van secties "{$section1Abbrev}" en "{$section2Abbrev}" in het nummer "{$issueTitle}" komen overeen met de verschillende secties in het tijdschrift.";s:59:"plugins.importexport.native.import.error.sectionAbbrevMatch";s:241:"De afkorting van sectie "{$sectionAbbrev}" in het nummer "{$issueTitle}" komt overeen met een bestaande tijdschriftsectie, maar een andere afkorting van deze sectie komt niet overeen met een andere afkorting van de huidige tijdschriftsectie.";s:65:"plugins.importexport.native.import.error.issueIdentificationMatch";s:101:"Er zijn geen nummers die overeenkomen met de opgegeven nummer-identificatie "{$issueIdentification}".";s:69:"plugins.importexport.native.import.error.issueIdentificationDuplicate";s:180:"Het bestaande nummer met id {$issueId} komt overeen met de opgegeven issue id "{$issueIdentification}". Het nummer zal niet worden gewijzigd, maar artkels zullen worden toegevoegd.";s:67:"plugins.importexport.native.import.error.issueIdentificationMissing";s:91:"Het element met de identicatie van het nummer ontbreekt voor het artikel "{$articleTitle}".";s:61:"plugins.importexport.native.import.error.publishedDateMissing";s:90:"Het artikel "{$articleTitle}" is opgenomen in een nummer, maar heeft geen publicatiedatum.";s:59:"plugins.importexport.common.error.coverImageNameUnspecified";s:69:"Er is een omslagafbeelding ingevoegd zonder een naam te specificeren.";s:54:"plugins.importexport.common.error.invalidFileExtension";s:75:"Er is een omslagafbeelding met een ongeldige file extension gespecificeerd.";}}}

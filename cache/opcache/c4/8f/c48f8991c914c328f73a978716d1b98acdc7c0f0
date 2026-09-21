@@ -1,0 +1,21 @@
+1790041077a:4:{s:7:"enabled";b:1;s:10:"blockTitle";a:2:{s:2:"id";s:19:"Journal Information";s:2:"en";s:8:"sidemenu";}s:12:"blockContent";a:2:{s:2:"en";s:885:"<div id="sidebarHelp" class="block"><a id="developedBy" class="blockTitle" href="http://pkp.sfu.ca/ojs/"></a> Login</div>
+<div id="sidebarUser" class="block"><form action="https://ejurnal.staialmannan.ac.id/index.php/cedekia/login/signIn" method="post">
+<table>
+<tbody>
+<tr>
+<td><label for="sidebar-username">Username</label></td>
+<td><input id="sidebar-username" class="textField" maxlength="32" name="username" size="12" type="text"></td>
+</tr>
+<tr>
+<td><label for="sidebar-password">Password</label></td>
+<td><input id="sidebar-password" class="textField" name="password" size="12" type="password"></td>
+</tr>
+<tr>
+<td colspan="2"><input id="remember" name="remember" type="checkbox" value="1"> <label for="remember">Remember me</label></td>
+</tr>
+<tr>
+<td colspan="2"><input class="button" type="submit" value="Login"></td>
+</tr>
+</tbody>
+</table>
+</form></div>";s:2:"id";s:0:"";}s:8:"showName";s:1:"1";}

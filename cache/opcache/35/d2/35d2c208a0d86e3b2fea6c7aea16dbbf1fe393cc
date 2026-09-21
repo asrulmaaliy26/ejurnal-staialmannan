@@ -1,0 +1,23 @@
+1815333244a:3:{s:6:"domain";N;s:12:"plural-forms";s:21:"nplurals=1; plural=0;";s:8:"messages";a:1:{s:0:"";a:23:{s:39:"plugins.importexport.native.displayName";s:16:"Plugin XML Natif";s:39:"plugins.importexport.native.description";s:62:"Impor dan ekspor artikel dan issue dalam format XML Natif OJS.";s:34:"plugins.importexport.native.import";s:5:"Impor";s:47:"plugins.importexport.native.import.instructions";s:29:"Unggah file XML untuk diimpor";s:51:"plugins.importexport.native.exportSubmissionsSelect";s:28:"Pilih artikel untuk diekspor";s:45:"plugins.importexport.native.exportSubmissions";s:14:"Ekspor artikel";s:40:"plugins.importexport.native.exportIssues";s:12:"Ekspor Issue";s:35:"plugins.importexport.native.results";s:11:"Impor Hasil";s:38:"plugins.inportexport.native.uploadFile";s:46:"Unggahlah file pada "Impor" untuk melanjutkan.";s:42:"plugins.importexport.native.importComplete";s:58:"Impor berhasil. Berikut daftar item yang berhasil diimpor:";s:36:"plugins.importexport.native.cliUsage";s:918:"Usage: {$scriptName} {$pluginName} [command] ...
+Perintah:
+	impor [xmlFileName] [journal_path] [user_name] ...
+	ekspor [xmlFileName] [journal_path] artikel [articleId1] [articleId2] ...
+	ekspor [xmlFileName] [journal_path] artikel [articleId]
+	ekspor [xmlFileName] [journal_path] issue [issueId1] [issueId2] ...
+	ekspor [xmlFileName] [journal_path] issue [issueId]
+
+Parameter tambahan diperlukan untuk mengimpor data sebagai berikut, bergantung
+pada root node dokumen XML.
+
+Jika root node <article> atau <articles>, parameter tambahan diperlukan.
+Format berikut dibolehkan:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} impor [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} impor [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+";s:48:"plugins.importexport.native.error.unknownSection";s:29:"Bagian Tak Diketahui {$param}";s:45:"plugins.importexport.native.error.unknownUser";s:49:"Pengguna yang dimaksud, "{$userName}", tidak ada.";s:61:"plugins.importexport.native.import.error.sectionTitleMismatch";s:142:"Bagian judul "{$section1Title}" dan bagian judul "{$section2Title}" dalam issue "{$issueTitle}" sam dengan bagian jurnal yang ada dan berbeda.";s:58:"plugins.importexport.native.import.error.sectionTitleMatch";s:177:"Judul bagian "{$sectionTitle}" dalam issue "{$issueTitle}" sesuai dengan bagian jurnal yang ada, tapi judul lain pada bagian ini tidak cocok dengan judul bagian jurnal yang ada.";s:62:"plugins.importexport.native.import.error.sectionAbbrevMismatch";s:145:"Singkatan bagian "{$section1Abbrev}" dan singkatan bagian "{$section2Abbrev}" dari issue "{$issueTitle}" sama dengan bagian jurnal lain yang ada.";s:59:"plugins.importexport.native.import.error.sectionAbbrevMatch";s:197:"Singkatan bagian "{$sectionAbbrev}" dalam issue "{$issueTitle}" sama dengan bagian jurnal yang ada, tapi singkatan lagi pada bagian ini tidak sama dengan singkatan lain dari bagian jurnal yang ada.";s:65:"plugins.importexport.native.import.error.issueIdentificationMatch";s:108:"Tidak ada atau lebih dari satu issue sama dengan identifikasi issue yang diberikan "{$issueIdentification}".";s:69:"plugins.importexport.native.import.error.issueIdentificationDuplicate";s:162:"Issue yang ada dengan id {$issueId} sama dengan identifikasi issue yang ada "{$issueIdentification}".  Issue ini tidak akan diubah, tapi akan ditambahkan artikel.";s:67:"plugins.importexport.native.import.error.issueIdentificationMissing";s:65:"Elemen identifikasi issue untuk artikel "{$articleTitle}" hilang.";s:61:"plugins.importexport.native.import.error.publishedDateMissing";s:83:"Artikel "{$articleTitle}" terdapat dalam issue, tapi tidak memiliki tanggal terbit.";s:54:"plugins.importexport.common.error.invalidFileExtension";s:57:"Gambar sampul dengan ekstensi tidak valid diidentifikasi.";s:59:"plugins.importexport.common.error.coverImageNameUnspecified";s:43:"Gambal sampul disematkan tanpa diberi nama.";}}}

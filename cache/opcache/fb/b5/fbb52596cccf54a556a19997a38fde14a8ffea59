@@ -1,0 +1,16 @@
+1795613761a:3:{s:6:"domain";N;s:12:"plural-forms";N;s:8:"messages";a:1:{s:0:"";a:22:{s:38:"plugins.importexport.users.displayName";s:16:"Users XML Plugin";s:38:"plugins.importexport.users.description";s:23:"Import and export users";s:35:"plugins.importexport.users.cliUsage";s:194:"Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [userId1] [userId2] ...
+";s:44:"plugins.importexport.users.cliUsage.examples";s:329:"
+Examples:
+	Import users into myJournal from myImportFile.xml:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal
+
+	Export all users from myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export users specified by their ID:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2
+";s:45:"plugins.importexport.users.import.importUsers";s:12:"Import Users";s:46:"plugins.importexport.users.import.instructions";s:382:"Select an XML data file containing user information to import into this journal. See the journal help for details on the format of this file.<br /><br />Note that if the imported file contains any usernames or email addresses that already exist in the system, the user data for those users will not be imported and any new roles to be created will be assigned to the existing users.";s:42:"plugins.importexport.users.import.dataFile";s:14:"User data file";s:44:"plugins.importexport.users.import.sendNotify";s:92:"Send a notification email to each imported user containing the user's username and password.";s:49:"plugins.importexport.users.import.continueOnError";s:51:"Continue to import other users if a failure occurs.";s:51:"plugins.importexport.users.import.usersWereImported";s:62:"The following users were successfully imported into the system";s:48:"plugins.importexport.users.import.errorsOccurred";s:33:"Errors occurred during the import";s:46:"plugins.importexport.users.import.confirmUsers";s:73:"Confirm that these are the users you would like to import into the system";s:41:"plugins.importexport.users.import.warning";s:7:"Warning";s:52:"plugins.importexport.users.import.encryptionMismatch";s:155:"Cannot use passwords hashed with {$importHash}; OJS is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.";s:39:"plugins.importexport.users.unknownPress";s:55:"An unknown journal path "{$journalPath}" was specified.";s:45:"plugins.importexport.users.export.exportUsers";s:12:"Export Users";s:46:"plugins.importexport.users.export.exportByRole";s:14:"Export By Role";s:48:"plugins.importexport.users.export.exportAllUsers";s:10:"Export All";s:48:"plugins.importexport.users.export.errorsOccurred";s:33:"Errors occurred during the export";s:41:"plugins.importexport.users.importComplete";s:160:"The import completed successfully. Users with usernames and email addresses that are not already in use have been imported, along with accompanying user groups.";s:34:"plugins.importexport.users.results";s:7:"Results";s:37:"plugins.importexport.users.uploadFile";s:57:"Please upload a file under "Import" in order to continue.";}}}

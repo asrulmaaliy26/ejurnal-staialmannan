@@ -1,0 +1,182 @@
+1795613761a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:69:{s:35:"emails.passwordResetConfirm.subject";s:27:"Password Reset Confirmation";s:32:"emails.passwordResetConfirm.body";s:335:"We have received a request to reset your password for the {$siteTitle} web site.<br />
+<br />
+If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />
+<br />
+Reset my password: {$passwordResetUrl}<br />
+<br />
+{$siteContactName}";s:27:"emails.userRegister.subject";s:20:"Journal Registration";s:24:"emails.userRegister.body";s:423:"{$recipientName}<br />
+<br />
+You have now been registered as a user with {$contextName}. We have included your username and password in this email, which are needed for all work with this journal through its website. At any point, you can ask to be removed from the journal's list of users by contacting me.<br />
+<br />
+Username: {$recipientUsername}<br />
+Password: {$password}<br />
+<br />
+Thank you,<br />
+{$signature}";s:34:"emails.userValidateContext.subject";s:21:"Validate Your Account";s:31:"emails.userValidateContext.body";s:274:"{$recipientName}<br />
+<br />
+You have created an account with {$contextName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
+<br />
+{$activateUrl}<br />
+<br />
+Thank you,<br />
+{$contextSignature}";s:31:"emails.userValidateSite.subject";s:21:"Validate Your Account";s:28:"emails.userValidateSite.body";s:269:"{$recipientName}<br />
+<br />
+You have created an account with {$siteTitle}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />
+<br />
+{$activateUrl}<br />
+<br />
+Thank you,<br />
+{$siteSignature}";s:31:"emails.reviewerRegister.subject";s:44:"Registration as Reviewer with {$contextName}";s:28:"emails.reviewerRegister.body";s:846:"<p>Dear {$recipientName},</p><p>In light of your expertise, we have registered your name in the reviewer database for {$contextName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.</p><p>We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.</p><p>Username: {$recipientUsername}<br />Password: {$password}</p><p>Thank you,</p>{$signature}";s:33:"emails.issuePublishNotify.subject";s:56:"Just published: {$issueIdentification} of {$contextName}";s:30:"emails.issuePublishNotify.body";s:413:"<p>Dear {$recipientName},</p><p>We are pleased to announce the publication of <a href="{$issueUrl}">{$issueIdentification}</a> of {$contextName}.  We invite you to read and share this work with your scholarly community.</p><p>Many thanks to our authors, reviewers, and editors for their valuable contributions, and to our readers for your continued interest.</p><div>{$issueToc}</div><p>Thank you,</p>{$signature}";s:27:"emails.editorAssign.subject";s:69:"You have been assigned as an editor on a submission to {$contextName}";s:24:"emails.editorAssign.body";s:599:"<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>If you find the submission to be relevant for {$contextName}, please forward the submission to the review stage by selecting "Send to Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this journal, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$contextSignature}";s:30:"emails.editorAssignReview.body";s:459:"<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the peer review process.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the submission</a> and assign qualified reviewers. You can assign a reviewer by clicking "Add Reviewer".</p><p>Thank you in advance.</p><p>Kind regards,</p>{$signature}";s:34:"emails.editorAssignProduction.body";s:589:"<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the production stage.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the submission</a>. Once production-ready files are available, upload them under the <strong>Publication > Galleys</strong> section. Then schedule the work for publication by clicking the <strong>Schedule for Publication</strong> button.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$signature}";s:28:"emails.reviewRequest.subject";s:20:"Invitation to review";s:25:"emails.reviewRequest.body";s:898:"<p>Dear {$recipientName},</p><p>I believe that you would serve as an excellent reviewer for a submission  to {$contextName}. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p><p>If you are able to review this submission, your review is due by {$reviewDueDate}. You can view the submission, upload review files, and submit your review by logging into the journal site and following the steps at the link below.</p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please <a href="{$reviewAssignmentUrl}">accept or decline</a> the review by <b>{$responseDueDate}</b>.</p><p>You may contact me with any questions about the submission or the review process.</p><p>Thank you for considering this request. Your help is much appreciated.</p><p>Kind regards,</p>{$signature}";s:40:"emails.reviewResponseOverdueAuto.subject";s:39:"Will you be able to review this for us?";s:37:"emails.reviewResponseOverdueAuto.body";s:1026:"<p>Dear {$recipientName},</p><p>This email is an automated reminder from {$contextName} in regards to our request for your review of the submission, "{$submissionTitle}."</p><p>You are receiving this email because we have not yet received a confirmation from you indicating whether or not you are able to undertake the review of this submission.</p><p>Please let us know whether or not you are able to undertake this review by using our submission management software to accept or decline this request.</p><p>If you are able to review this submission, your review is due by {$reviewDueDate}. You can follow the review steps to view the submission, upload review files, and submit your review comments.</p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please feel free to contact me with any questions about the submission or the review process.</p><p>Thank you for considering this request. Your help is much appreciated.</p><p>Kind regards,</p>{$contextSignature}";s:38:"emails.reviewRequestSubsequent.subject";s:38:"Request to review a revised submission";s:35:"emails.reviewRequestSubsequent.body";s:978:"<p>Dear {$recipientName},</p><p>Thank you for your review of <a href="{$reviewAssignmentUrl}">{$submissionTitle}</a>. The authors have considered the reviewers' feedback and have now submitted a revised version of their work. I'm writing to ask if you would conduct a second round of peer review for this submission.</p><p>If you are able to review this submission, your review is due by {$reviewDueDate}. You can <a href="{$reviewAssignmentUrl}">follow the review steps</a> to view the submission, upload review files, and submit your review comments.<p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please <a href="{$reviewAssignmentUrl}">accept or decline</a> the review by <b>{$responseDueDate}</b>.</p><p>Please feel free to contact me with any questions about the submission or the review process.</p><p>Thank you for considering this request. Your help is much appreciated.</p><p>Kind regards,</p>{$signature}";s:27:"emails.reviewCancel.subject";s:28:"Request for Review Cancelled";s:24:"emails.reviewCancel.body";s:417:"<p>Dear {$recipientName},</p><p>Recently, we asked you to review a submission to {$contextName}. We have decided to cancel the request for you to reivew the submission, {$submissionTitle}.</p><p>We apologize any inconvenience this may cause you and hope that we will be able to call on you to assist with this journal's review process in the future.</p><p>If you have any questions, please contact me.</p>{$signature}";s:30:"emails.reviewReinstate.subject";s:50:"Can you still review something for {$contextName}?";s:27:"emails.reviewReinstate.body";s:519:"<p>Dear {$recipientName},</p><p>We recently cancelled our request for you to review a submission, {$submissionTitle}, for {$contextName}. We've reversed that decision and we hope that you are still able to conduct the review.</p><p>If you are able to assist with this submission's review, you can <a href="{$reviewAssignmentUrl}">login to the journal</a> to view the submission, upload review files, and submit your review request.</p><p>If you have any questions, please contact me.</p><p>Kind regards,</p>{$signature}";s:28:"emails.reviewDecline.subject";s:16:"Unable to Review";s:25:"emails.reviewDecline.body";s:240:"Editors:<br />
+<br />
+I am afraid that at this time I am unable to review the submission, &quot;{$submissionTitle},&quot; for {$contextName}. Thank you for thinking of me, and another time feel free to call on me.<br />
+<br />
+{$senderName}";s:27:"emails.reviewRemind.subject";s:41:"A reminder to please complete your review";s:24:"emails.reviewRemind.body";s:623:"<p>Dear {$recipientName},</p><p>Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$contextName}. We were expecting to have this review by {$reviewDueDate} and we would be pleased to receive it as soon as you are able to prepare it.</p><p>You can <a href="{$reviewAssignmentUrl}">login to the journal</a> and follow the review steps to view the submission, upload review files, and submit your review comments.</p><p>If you need an extension of the deadline, please contact me. I look forward to hearing from you.</p><p>Thank you in advance and kind regards,</p>{$signature}";s:31:"emails.reviewRemindAuto.subject";s:41:"A reminder to please complete your review";s:28:"emails.reviewRemindAuto.body";s:659:"<p>Dear {$recipientName}:</p><p>This email is an automated reminder from {$contextName} in regards to our request for your review of the submission, "{$submissionTitle}."</p><p>We were expecting to have this review by {$reviewDueDate} and we would be pleased to receive it as soon as you are able to prepare it.</p><p>Please <a href="{$reviewAssignmentUrl}">login to the journal</a> and follow the review steps to view the submission, upload review files, and submit your review comments.</p><p>If you need an extension of the deadline, please contact me. I look forward to hearing from you.</p><p>Thank you in advance and kind regards,</p>{$contextSignature}";s:35:"emails.editorDecisionAccept.subject";s:51:"Your submission has been accepted to {$contextName}";s:32:"emails.editorDecisionAccept.body";s:932:"<p>Dear {$recipientName},</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, {$submissionTitle}, to meet or exceed our expectations. We are excited to publish your piece in {$contextName} and we thank you for choosing our journal as a venue for your work.</p><p>Your submission is now forthcoming in a future issue of {$contextName} and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p>{$signature}";s:39:"emails.editorDecisionSkipReview.subject";s:45:"Your submission has been sent for copyediting";s:36:"emails.editorDecisionSkipReview.body";s:967:"<p>Dear {$recipientName},</p>
+<p>I am pleased to inform you that we have decided to accept your submission without peer review. We found your submission, {$submissionTitle}, to meet our expectations, and we do not require that work of this type undergo peer review. We are excited to publish your piece in {$contextName} and we thank you for choosing our journal as a venue for your work.</p>
+Your submission is now forthcoming in a future issue of {$contextName} and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on your efforts.</p>
+<p>Your submission will now undergo copy editing and formatting to prepare it for publication. </p>
+<p>You will shortly receive further instructions.</p>
+<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>
+<p>Kind regards,</p>
+<p>{$signature}</p>
+";s:28:"emails.layoutRequest.subject";s:71:"Submission {$submissionId} is ready for production at {$contextAcronym}";s:25:"emails.layoutRequest.body";s:691:"<p>Dear {$recipientName},</p><p>A new submission is ready for layout editing:</p><p><a href="{$submissionUrl}">{$submissionId} — {$submissionTitle}</a><br />{$contextName}</p><ol><li>Click on the Submission URL above.</li><li>Download the Production Ready files and use them to create the galleys according to the journal's standards.</li><li>Upload the galleys to the Publication section of the submission.</li><li>Use the  Production Discussions to notify the editor that the galleys are ready.</li></ol><p>If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.</p><p>Kind regards,</p>{$signature}";s:29:"emails.layoutComplete.subject";s:16:"Galleys Complete";s:26:"emails.layoutComplete.body";s:294:"<p>Dear {$recipientName},</p><p>Galleys have now been prepared for the following submission and are ready for final review.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$contextName}</p><p>If you have any questions, please contact me.</p><p>Kind regards,</p><p>{$signature}</p>";s:24:"emails.emailLink.subject";s:28:"Article of Possible Interest";s:21:"emails.emailLink.body";s:188:"Thought you might be interested in seeing &quot;{$submissionTitle}&quot; by {$authors} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;{$submissionUrl}&quot;.";s:33:"emails.subscriptionNotify.subject";s:25:"Subscription Notification";s:30:"emails.subscriptionNotify.body";s:799:"{$recipientName}:<br />
+<br />
+You have now been registered as a subscriber in our online journal management system for {$contextName}, with the following subscription:<br />
+<br />
+{$subscriptionType}<br />
+<br />
+To access content that is available only to subscribers, simply log in to the system with your username, &quot;{$recipientUsername}&quot;.<br />
+<br />
+Once you have logged in to the system you can change your profile details and password at any point.<br />
+<br />
+Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionSignature}";s:31:"emails.openAccessNotify.subject";s:73:"Free to read: {$issueIdentification} of {$contextName} is now open access";s:28:"emails.openAccessNotify.body";s:307:"<p>Dear {$recipientName},</p><p>We are pleased to inform you that <a href="{$issueUrl}">{$issueIdentification}</a> of {$contextName} is now available under open access.  A subscription is no longer required to read this issue.</p><p>Thank you for your continuing interest in our work.</p>{$contextSignature}";s:39:"emails.subscriptionBeforeExpiry.subject";s:29:"Notice of Subscription Expiry";s:36:"emails.subscriptionBeforeExpiry.body";s:482:"{$recipientName}:<br />
+<br />
+Your {$contextName} subscription is about to expire.<br />
+<br />
+{$subscriptionType}<br />
+Expiry date: {$expiryDate}<br />
+<br />
+To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, &quot;{$recipientUsername}&quot;.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionSignature}";s:38:"emails.subscriptionAfterExpiry.subject";s:20:"Subscription Expired";s:35:"emails.subscriptionAfterExpiry.body";s:418:"{$recipientName}:<br />
+<br />
+Your {$contextName} subscription has expired.<br />
+<br />
+{$subscriptionType}<br />
+Expiry date: {$expiryDate}<br />
+<br />
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, &quot;{$recipientUsername}&quot;.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionSignature}";s:42:"emails.subscriptionAfterExpiryLast.subject";s:37:"Subscription Expired - Final Reminder";s:39:"emails.subscriptionAfterExpiryLast.body";s:497:"{$recipientName}:<br />
+<br />
+Your {$contextName} subscription has expired.<br />
+Please note that this is the final reminder that will be emailed to you.<br />
+<br />
+{$subscriptionType}<br />
+Expiry date: {$expiryDate}<br />
+<br />
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, &quot;{$recipientUsername}&quot;.<br />
+<br />
+If you have any questions, please feel free to contact me.<br />
+<br />
+{$subscriptionSignature}";s:39:"emails.subscriptionPurchaseIndl.subject";s:33:"Subscription Purchase: Individual";s:36:"emails.subscriptionPurchaseIndl.body";s:409:"An individual subscription has been purchased online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+User:<br />
+{$subscriberDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: {$subscriptionUrl}<br />
+";s:40:"emails.subscriptionPurchaseInstl.subject";s:36:"Subscription Purchase: Institutional";s:37:"emails.subscriptionPurchaseInstl.body";s:732:"An institutional subscription has been purchased online for {$contextName} with the following details. To activate this subscription, please use the provided Subscription URL and set the subscription status to 'Active'.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (if provided):<br />
+{$domain}<br />
+<br />
+IP Ranges (if provided):<br />
+{$ipRanges}<br />
+<br />
+Contact Person:<br />
+{$subscriberDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: {$subscriptionUrl}<br />
+";s:36:"emails.subscriptionRenewIndl.subject";s:32:"Subscription Renewal: Individual";s:33:"emails.subscriptionRenewIndl.body";s:407:"An individual subscription has been renewed online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+User:<br />
+{$subscriberDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: {$subscriptionUrl}<br />
+";s:37:"emails.subscriptionRenewInstl.subject";s:35:"Subscription Renewal: Institutional";s:34:"emails.subscriptionRenewInstl.body";s:613:"An institutional subscription has been renewed online for {$contextName} with the following details.<br />
+<br />
+Subscription Type:<br />
+{$subscriptionType}<br />
+<br />
+Institution:<br />
+{$institutionName}<br />
+{$institutionMailingAddress}<br />
+<br />
+Domain (if provided):<br />
+{$domain}<br />
+<br />
+IP Ranges (if provided):<br />
+{$ipRanges}<br />
+<br />
+Contact Person:<br />
+{$subscriberDetails}<br />
+<br />
+Membership Information (if provided):<br />
+{$membership}<br />
+<br />
+To view or edit this subscription, please use the following URL.<br />
+<br />
+Subscription URL: {$subscriptionUrl}<br />
+";s:35:"emails.revisedVersionNotify.subject";s:24:"Revised Version Uploaded";s:32:"emails.revisedVersionNotify.body";s:412:"<p>Dear {$recipientName},</p><p>The author has uploaded revisions for the submission, <b>{$authorsShort} — {$submissionTitle}</b>. <p>As an assigned editor, we ask that you login and <a href="{$submissionUrl}">view the revisions</a> and make a decision to accept, decline or send the submission for further review.</p><br><br>—<br>This is an automated message from <a href="{$contextUrl}">{$contextName}</a>.";s:43:"emails.statisticsReportNotification.subject";s:40:"Editorial activity for {$month}, {$year}";s:40:"emails.statisticsReportNotification.body";s:679:"
+{$recipientName}, <br />
+<br />
+Your journal health report for {$month}, {$year} is now available. Your key stats for this month are below.<br />
+<ul>
+	<li>New submissions this month: {$newSubmissions}</li>
+	<li>Declined submissions this month: {$declinedSubmissions}</li>
+	<li>Accepted submissions this month: {$acceptedSubmissions}</li>
+	<li>Total submissions in the system: {$totalSubmissions}</li>
+</ul>
+Login to the journal to view more detailed <a href="{$editorialStatsLink}">editorial trends</a> and <a href="{$publicationStatsLink}">published article stats</a>. A full copy of this month's editorial trends is attached.<br />
+<br />
+Sincerely,<br />
+{$contextSignature}";s:27:"emails.announcement.subject";s:20:"{$announcementTitle}";s:24:"emails.announcement.body";s:158:"<b>{$announcementTitle}</b><br />
+<br />
+{$announcementSummary}<br />
+<br />
+Visit our website to read the <a href="{$announcementUrl}">full announcement</a>.";s:41:"emails.paymentRequestNotification.subject";s:28:"Payment Request Notification";s:38:"emails.paymentRequestNotification.body";s:516:"<p>Dear {$recipientName},</p><p>Congratulations on the acceptance of your submission, {$submissionTitle}, to {$contextName}. Now that your submission has been accepted, we would like to request payment of the publication fee.</p><p>This fee covers the production costs of bringing your submission to publication. To make the payment, please visit <a href="{$queuedPaymentUrl}">{$queuedPaymentUrl}</a>.</p><p>If you have any questions, please see our <a href="{$submissionGuidelinesUrl}">Submission Guidelines</a></p>";s:40:"emails.paymentRequestNotification.footer";s:92:"<br><br>—<br>This is an automated message from <a href="{$contextUrl}">{$contextName}</a>.";}}}

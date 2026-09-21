@@ -1,0 +1,6 @@
+1799813725a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:4:{s:40:"emails.manualPaymentNotification.subject";s:29:"Notifica di pagamento manuale";s:37:"emails.manualPaymentNotification.body";s:364:"È necessario registrare un pagamento manuale per {$contextName}, utente {$senderName} (username &quot;{$senderUsername}&quot;).<br />
+<br />
+Il pagamento riguarda &quot;{$paymentName}&quot;.<br />
+Il costo è {$paymentAmount} ({$paymentCurrencyCode}).<br />
+<br />
+Questa email è generata automaticamente dal plugin di pagamento manuale per Open Journal Systems.";s:44:"emails.manualPaymentNotification.description";s:105:"Questo template viene usato per notificare a journal manager che un pagamento manuale è stato richiesto.";s:57:"emailTemplate.variable.manualPaymentPlugin.senderUsername";s:51:"Username dell'utente che ha effettuato il pagamento";}}}
