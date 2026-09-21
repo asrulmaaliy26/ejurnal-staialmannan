@@ -1,0 +1,36 @@
+# ----------------------------------------------------------------------
+# Keamanan Dasar Direktori Web OJS (Open Journal Systems)
+# ----------------------------------------------------------------------
+
+# 1. Matikan Directory Browsing (mencegah penyerang melihat daftar isi folder)
+Options -Indexes
+
+# 2. Blokir akses ke file & folder tersembunyi (.git, .github, .env, dll.)
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. Blokir akses langsung ke file konfigurasi, database dump, dan log
+<FilesMatch "\.(bak|config|sql|sql\.gz|log|ini|sh|yml|yaml|md|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<Files "config.inc.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "config.TEMPLATE.inc.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# 4. Header Keamanan Tambahan (Jika mod_headers aktif di Apache/Nginx)
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

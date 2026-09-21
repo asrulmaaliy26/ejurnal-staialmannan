@@ -12,9 +12,7 @@ error_log
 Archive1.zip
 
 # Cache OJS (Wajib di-ignore agar tidak conflict)
-cache/t_compile/*
-cache/opcache/*
-cache/*.php
+cache/*
 !cache/index.html
 !cache/.htaccess
 
