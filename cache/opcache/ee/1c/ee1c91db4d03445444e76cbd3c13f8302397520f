@@ -1,7 +1,0 @@
-1815333244a:3:{s:6:"domain";N;s:12:"plural-forms";s:21:"nplurals=1; plural=0;";s:8:"messages";a:1:{s:0:"";a:4:{s:40:"emails.manualPaymentNotification.subject";s:31:"Pemberitahuan Pembayaran Manual";s:37:"emails.manualPaymentNotification.body";s:299:"Pembayaran manual harus diproses untuk jurnal {$contextName} dan pengguna &quot;{$senderUsername}&quot;
-.<br />
-<br />
-Item yang akan dibayar adalah &quot;{$paymentName}&quot;.<br />
-Biayanya {$paymentAmount} ({$paymentCurrencyCode}).<br />
-<br />
-Email ini dibuat oleh plugin Pembayaran Manual OJS.";s:44:"emails.manualPaymentNotification.description";s:98:"Email ini digunakan untuk memberitahukan kontak manajer jurnal bahwa pembayaran manual dibutuhkan.";s:57:"emailTemplate.variable.manualPaymentPlugin.senderUsername";s:43:"Username pengguna yang melakukan pembayaran";}}}

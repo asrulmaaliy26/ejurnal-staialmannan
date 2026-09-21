@@ -1,6 +1,0 @@
-1803111350a:3:{s:6:"domain";N;s:12:"plural-forms";s:26:"nplurals=2; plural=n != 1;";s:8:"messages";a:1:{s:0:"";a:4:{s:40:"emails.manualPaymentNotification.subject";s:28:"Notificación de pago manual";s:37:"emails.manualPaymentNotification.body";s:359:"Se necesita procesar un pago manual para la revista {$contextName} y el usuario/a {$senderName} (username &quot;{$senderUsername}&quot;).<br />
-<br />
-El elemento pagado es &quot;{$paymentName}&quot;.<br />
-El precio es {$paymentAmount} ({$paymentCurrencyCode}).<br />
-<br />
-Este correo ha sido generado por el módulo de pago manual de Open Journal Systems.";s:44:"emails.manualPaymentNotification.description";s:112:"Este correo electrónico se usa para notificar al gestor/a de la revista de que se ha solicitado un pago manual.";s:57:"emailTemplate.variable.manualPaymentPlugin.senderUsername";s:57:"El nombre de usuario/a de la persona que ha hecho el pago";}}}

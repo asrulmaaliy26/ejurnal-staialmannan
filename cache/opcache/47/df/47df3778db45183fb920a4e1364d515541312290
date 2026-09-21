@@ -1,6 +1,0 @@
-1799813291a:3:{s:6:"domain";N;s:12:"plural-forms";s:100:"nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;";s:8:"messages";a:1:{s:0:"";a:4:{s:40:"emails.manualPaymentNotification.subject";s:40:"Уведомление о платеже";s:37:"emails.manualPaymentNotification.body";s:490:"Необходимо вручную обработать платеж для журнала «{$contextName}» и пользователя {$senderName} (имя пользователя «{$senderUsername}»).<br />
-<br />
-Оплата вносится за «{$paymentName}».<br />
-Сумма {$paymentAmount} ({$paymentCurrencyCode}).<br />
-<br />
-Это письмо сгенерировано модулем «Ввод оплаты вручную» системы Open Journal Systems.";s:44:"emails.manualPaymentNotification.description";s:211:"Этот шаблон письма используется для уведомления управляющего журналом о том, что был запрошен ввод оплаты вручную.";s:57:"emailTemplate.variable.manualPaymentPlugin.senderUsername";s:81:"Логин пользователя, который произвёл оплату";}}}

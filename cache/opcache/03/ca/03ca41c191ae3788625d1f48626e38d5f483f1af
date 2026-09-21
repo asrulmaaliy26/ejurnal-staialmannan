@@ -1,6 +1,0 @@
-1799813664a:3:{s:6:"domain";N;s:12:"plural-forms";N;s:8:"messages";a:1:{s:0:"";a:3:{s:40:"emails.manualPaymentNotification.subject";s:31:"Bericht van handmatige betaling";s:37:"emails.manualPaymentNotification.body";s:381:"Er moet een handmatige betaling verwerkt worden voor tijdschrift {$contextName} en gebruiker {$senderName} (gebruikersnaam &quot;{$senderUsername}&quot;).<br />
-<br />
-Er wordt betaald voor &quot;{$paymentName}&quot;.<br />
-De prijs is {$paymentAmount} ({$paymentCurrencyCode}).<br />
-<br />
-Deze e-mail is gegenereerd door de Handmatige betalingen plugin van Open Journal Systems.";s:44:"emails.manualPaymentNotification.description";s:123:"Dit e-mail sjabloon wordt gebruikt om een tijdschriftbeheerder te verwittigen dat een handmatige betaling werd aangevraagd.";}}}

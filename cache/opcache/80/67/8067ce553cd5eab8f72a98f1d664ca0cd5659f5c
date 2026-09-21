@@ -1,1 +1,0 @@
-1799813291a:3:{s:6:"domain";N;s:12:"plural-forms";N;s:8:"messages";a:1:{s:0:"";a:3:{s:36:"plugins.reports.articles.displayName";s:45:"Модуль «Отчет о статьях»";s:36:"plugins.reports.articles.description";s:134:"Реализует отчет в формате CSV, содержащий список статей и информацию о них.";s:35:"plugins.reports.articles.nodecision";s:21:"Нет решения";}}}
