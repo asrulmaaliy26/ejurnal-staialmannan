@@ -58,8 +58,9 @@ jobs:
             rm -rf plugins/oaiMetadataFormats/rfc1807
             rm -rf lib/pkp/classes/form/validation/lib
             rm -rf lib/pkp/lib/vendor/altcha-org/altcha/src/SUMANTO
-            # 3. Bersihkan cache template agar perubahan tampilan (UI/CSS/TPL) langsung aktif
+            # 3. Bersihkan cache template & opcache agar perubahan tampilan (UI/CSS/TPL) langsung aktif
             rm -rf cache/t_compile/*
+            rm -rf cache/opcache/*
             rm -f cache/*.php
             echo "Template and system cache refreshed!"
 
